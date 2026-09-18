@@ -4,3 +4,24 @@ function echanger(tab, i, j) {
     tab[i] = tab[j];
     tab[j] = tmp;
 }
+
+//2.2
+function ranger(T) {
+    let gauche = 0;
+    let droite = T.length - 1;
+
+    while (gauche < droite) {
+        if (T[gauche] === 0) {
+            gauche++;
+        } else if (T[droite] === 1) {
+            droite--;
+        } else {
+            // T[gauche] === 1 et T[droite] === 0
+            echanger(T, gauche, droite);
+            gauche++;
+            droite--;
+        }
+    }
+    return T;
+}
+
