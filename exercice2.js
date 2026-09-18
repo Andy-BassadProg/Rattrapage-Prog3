@@ -25,3 +25,11 @@ function ranger(T) {
     return T;
 }
 
+//2.3
+function nombreUn(T) {
+    let compte = 0;
+    for (let i = T.length - 1; i >= 0 && T[i] === 1; i--) {
+        compte++;
+    }
+    return compte;
+}
